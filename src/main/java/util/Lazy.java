@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 
 public final class Lazy<T> {
 
-    private  T value;
+    private volatile T value;
 
     public T getOrCompute(Supplier<T> supplier){
         final T result = value;
